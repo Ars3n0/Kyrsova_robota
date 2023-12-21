@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>Студія Відеопродакшну</title>
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+    />
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        function openModal() {
+          document.getElementById('myModal').style.display = 'block';
+        }
+        openModal();
+        function closeModalAndNavigate() {
+          document.getElementById('myModal').style.display = 'none';
+          window.location.href = "index.html";
+        }
+        document
+          .getElementsByClassName('close')[0]
+          .addEventListener('click', closeModalAndNavigate);
+        window.addEventListener('click', function (event) {
+          if (event.target === document.getElementById('myModal')) {
+            closeModalAndNavigate();
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Зв'язок з нами</h2>
+        <p>Залиште свої контактні дані, і ми з вами зв'яжемося!</p>
+        <form>
+          <label for="name">Ім'я:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <button type="submit">Надіслати</button>
+        </form>
+      </div>
+    </div>
+
+  </body>
+</html>
